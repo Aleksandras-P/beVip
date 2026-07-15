@@ -1,0 +1,6 @@
+@use "../abstracts/mixins" ;
+
+.footer-nav {
+    @include mixins.footerCard($direction: 5px 3px 5px 1px);
+    padding: 20px;
+}

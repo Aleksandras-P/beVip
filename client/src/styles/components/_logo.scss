@@ -1,0 +1,50 @@
+@use "../abstracts/mixins" ;
+@use "../abstracts/variables" as vars ;
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+
+  &__crown {
+    font-size: 26px;
+    line-height: 1;
+    @include mixins.goldGradient-text;
+
+  }
+
+  &__text {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin: 0;
+    position: relative;
+    padding-bottom: 10px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      height: 1px;
+      background: vars.$goldGradient
+    }
+  }
+
+  &__word {
+    
+    color: var(--logo-first-word);
+
+    &--second {
+      font-weight: 400;
+      text-transform: uppercase;
+      @include mixins.goldGradient-text
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.orderCard {
+
+    border-bottom: 1px solid var(--orderCard-border);
+    
+    &__cardLabel {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 20px;
+    }
+
+    &__img {
+        width: 20%;
+
+        img {
+            width: 90%;
+            margin-top: 20px;
+        }
+    }
+
+    &__cardContent {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+        margin-bottom: 20px;
+    }
+
+    &__closeBtn {
+        cursor: pointer;
+    }
+
+}

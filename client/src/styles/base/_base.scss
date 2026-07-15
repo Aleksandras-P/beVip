@@ -1,0 +1,50 @@
+@use "../abstracts/variables" as vars ;
+@use "../abstracts/mixins";
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  position: relative;
+}
+
+
+.container {
+    margin: 0 200px;
+
+    @include mixins.mobile {
+            margin: 0 70px;
+        }
+
+        @include mixins.tablet {
+            margin: 0 100px;
+        }
+}
+
+.lamp {
+  border-radius: 50%;
+  height: 16px;
+  width: 16px;
+}
+
+.available {
+  background: vars.$greenColor;
+}
+
+.unavailable {
+  background: vars.$redColor;
+}
+
+.selected {
+  border: 2px solid var(--selected-border);
+}
+
+.descriptions-span {
+  color: var(--descriptions-span-text);
+}
+
+.descriptionSpan {
+  display: block;
+  font-weight: 900;
+}
+

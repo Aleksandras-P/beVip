@@ -1,0 +1,48 @@
+@use "../abstracts/mixins";
+
+.header {
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+
+    p {
+        margin: 20px 0;
+    }
+
+    background: var(--header-bg);
+
+    &__content-box {
+        margin-left: 10%;
+        padding: 20px 40px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        border-radius: 10px;
+        box-shadow: -5px 5px 6px 2px var(--shadow-color);
+        border: 1px solid var(--discountCardBg-border);
+
+        @include mixins.mobile {
+            display: none;
+        }
+
+        @include mixins.tablet {
+            display: none;
+        }
+
+    }
+
+    &__adsContainer {
+        width: calc(50% - 30px);
+
+        @include mixins.mobile {
+            width: 100%;
+        }
+
+        @include mixins.tablet {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,10 @@
+@use "../abstracts/variables" as vars ;
+
+.copyright {
+    text-align: center;
+    border-top: 1px solid var(--footer-copyright-border);
+    padding: 10px 0;
+    color: var(--footer-copyright-text);
+    word-spacing: 5px;
+    font-family: vars.$font-marcellus;
+}

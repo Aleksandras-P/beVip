@@ -1,0 +1,32 @@
+$primaryColor: #1D4ED8;
+$primaryDarkColor: #1E3A8A;
+$secondaryColor: #FFC857;
+$secondaryDarkColor: #E0A800;
+$darkColor: #0F172A;
+$lightColor: #F8FAFC;
+$greenColor: #2fff00 ; 
+$redColor: #ff0000;
+$greyColor: #8c8c8c;
+
+$goldGradient: linear-gradient(
+	to right,
+	#624731 0,
+    #cb9b51 10%, 
+	#f6e27a 45%,
+	#f6f2c0 50%,
+	#f6e27a 55%,
+	#cb9b51 78%,
+	#462523 100%
+);
+
+$font-marcellus: 'Marcellus', serif;
+$font-outfit: 'Outfit', sans-serif;
+
+$fw-light: 300;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semibold: 600;
+$fw-bold: 700;
+
+$breakpoint-tablet: 768px;
+$breakpoint-pc: 1024px;

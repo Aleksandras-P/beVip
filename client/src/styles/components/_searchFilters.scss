@@ -1,0 +1,93 @@
+@use "../abstracts/mixins";
+
+.searchFilters {
+    
+
+text-align: right;
+
+
+    &__openCloseBtn {
+        display: inline-block;
+        cursor: pointer;
+        color: var(--searchFiltersBtn-color);
+         transition: all 0.4s;
+        font-size: 18px;
+        text-transform:capitalize;
+    }
+
+    &__openCloseBtn:hover {
+        color: var(--searchFiltersBtn-hover);
+    }
+
+    &__container {
+        background: var(--searchFiltersContainer-bg) ;
+        padding: 15px 30px;
+        border: 1px solid var(--searchFiltersContainer-border);
+        border-radius: 10px;
+        box-shadow: 3px 3px 5px 3px var(--shadow-color);
+    }
+
+
+
+    &__menu {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 30px;
+        margin-bottom: 2%;
+    }
+
+    &__byPrice-container {
+        @include mixins.inputStyle;
+        cursor: pointer;
+    }
+
+
+    &__byPrice {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    &__input {
+        @include mixins.inputStyle;
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+
+        
+  }
+        
+    }
+
+    &__select {
+        @include mixins.inputStyle;
+        cursor: pointer;
+        appearance: none;
+        padding: 5px 30px 5px 10px;
+        
+        &:focus {
+        outline: none;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-bottom: none;
+    }
+}
+
+    
+}
+
+.searchFilters__select option {
+  background: var(--surface-color, #0f172afb);
+  color: var(--text-color, #fff);
+  padding: 10px;
+  border-radius: 0px 0px 10px 10px;
+  cursor: pointer;
+}
+
+.searchFilters__select option:checked {
+  background:  #2564ebc2;
+}

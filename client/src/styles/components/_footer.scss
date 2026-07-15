@@ -1,0 +1,29 @@
+@use "../abstracts/mixins";
+
+.footer {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 5%;
+    background: var(--footer-bg);
+    gap: 20px;
+
+    &__content{
+        padding: 1% 5% 1% 5%;
+        display: flex;
+        justify-content: center;
+        gap: 40%;
+        align-items: center;
+
+        @include mixins.mobile {
+            flex-direction: column-reverse;
+            gap: 20px;
+        }
+
+        @include mixins.tablet {
+            flex-direction: column-reverse;
+            gap: 20px;
+        }
+    }
+    
+}

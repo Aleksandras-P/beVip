@@ -1,0 +1,40 @@
+// 
+// 
+button {
+  padding: 10px 25px;
+  // margin-right: 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: none;
+  font-weight: 600;
+}
+
+button:hover {
+  transform:scaleY(95%) scaleX(95%);
+  transition: transform 0.3s ease-in-out;
+}
+// 
+
+.primaryBtn {
+  border: 1px solid var(--primaryBtn-border);
+  background: transparent;
+  color: var(--primaryBtn-text);
+}
+
+.primaryBtn-filled {
+  background: var(--primaryBtn-filled-bg);
+  color: var(--primaryBtn-filled-text);
+  border: 1px solid var(--primaryBtn-filled-border);
+}
+
+.secondaryBtn {
+  border: 1px solid var(--secondaryBtn-border);
+  background: transparent;
+  color: var(--secondaryBtn-text);
+}
+
+.secondaryBtn-filled {
+  background: var(--secondaryBtn-filled-bg);
+  color: var(--secondaryBtn-filled-text);
+  border: 1px solid var(--secondaryBtn-filled-border);
+}

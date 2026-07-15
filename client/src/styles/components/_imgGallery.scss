@@ -1,0 +1,31 @@
+.imgGallery {
+    
+    &__imgDisplay {
+        border-radius: 10px;
+        overflow: hidden;
+
+    }
+
+    &__selectedImg {
+        width: 100%;
+    }
+
+    &__img-selector {
+        display: flex;
+        gap: 20px;
+    }
+
+    &__img-card{
+       width: 20%;
+       border-radius: 10px;
+       overflow: hidden;
+       cursor: pointer;
+       box-shadow: 4px 2px 5px 1px rgba(0, 0, 0, 0.409);
+    }
+
+    &__img {
+        height: 100%;
+        width: 100%;
+    }
+
+}

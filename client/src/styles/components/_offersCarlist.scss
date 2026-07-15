@@ -1,0 +1,31 @@
+@use "../abstracts/mixins";
+
+
+.offersCarlist {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 5% 0;
+
+    &__card {
+        width: calc((100% + 25%) / 4 );
+
+        @include mixins.mobile {
+            display: flex;
+            gap: 20px;
+            width: 100%;
+        }
+
+        @include mixins.tablet {
+            display: flex;
+            gap: 20px;
+            width: 100%;
+        }
+        
+    }
+
+    }
+
+    

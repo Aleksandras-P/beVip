@@ -1,0 +1,49 @@
+@use "./variables" as vars ;
+
+@mixin goldGradient-text {
+   background-image: vars.$goldGradient ;
+   color:transparent;
+   background-clip: text;
+   -webkit-background-clip: text;
+}
+
+@mixin footerCard($direction) {
+   display: flex;
+   gap: 50px;
+   align-items: center;
+   justify-content: center;
+   border: 1px solid var(--footer-card-border);
+
+   border-radius: 10px;
+   padding: 0px 20px ;
+   background: var(--footer-card-bg);
+   box-shadow: $direction var(--shadow-color);
+}
+
+@mixin inputStyle {
+   padding: 5px 10px;
+   border-radius: 10px;
+   border: 1px solid var(--input-border);
+   background: var(--input-bg);
+   font-size: 13px;
+   color: var(--searchLabel-text);
+   text-transform: capitalize;
+}
+
+@mixin mobile {
+  @media (max-width: #{vars.$breakpoint-tablet - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: vars.$breakpoint-tablet) and (max-width: #{vars.$breakpoint-pc - 1px}) {
+    @content;
+  }
+}
+
+@mixin pc {
+  @media (min-width: vars.$breakpoint-pc) {
+    @content;
+  }
+}

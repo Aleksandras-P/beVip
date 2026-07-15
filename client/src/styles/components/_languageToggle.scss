@@ -1,0 +1,24 @@
+.languageToggleBtn {
+background: none;
+        border: none;
+        border-radius: 50%;
+        overflow: hidden;
+        width: 10%;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;  
+
+&__flag {
+    max-height: 18px;
+    min-width: 50px;
+}
+
+
+}
+
+.languageToggleBtn:hover {
+    cursor: pointer;
+
+    border: 1px solid var(--language-toggle-border)
+}

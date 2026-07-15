@@ -1,0 +1,73 @@
+@use "../abstracts/mixins";
+
+.carCard {
+    position: relative;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    cursor: pointer;
+    min-height: 150px;
+    border-radius: 10px;
+    border: 1px solid var(--carCard-border);
+
+    flex: 0 1 100%;
+
+        @include mixins.mobile {
+            width: 100%;
+        }
+
+        @include mixins.tablet {
+            width: 100%;
+        }
+
+
+    &__availability {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background: rgba(0, 0, 0, 0.7);
+    }
+
+
+    &__content {
+        display: flex;
+        gap: 20px;
+        margin-top: 20px;
+        height: 100%;
+    }
+
+    &__link {
+        background: var(--carCard-link-bg);
+        padding: 5px 15px;
+        border-radius: 10px;
+        transition: all 0.3s;
+        border: 1px solid var(--carCard-link-border);
+        text-transform: capitalize;
+        font-size: 18px;
+    }
+
+    &__link:hover {
+        background: var(--carCard-link-hover);
+    }
+
+
+    &__bookingIcon {
+        color: var(--bookingIcon-color);
+        margin-right: 1%;
+        
+    }
+
+
+    .carCard:hover &__availability {
+    opacity: 1;
+}
+
+}
+
+.carCard:hover {
+    transform: translateY(-5%);
+    transition: all 0.5s ease;
+    box-shadow: 7px 5px 10px 5px rgba(0, 0, 0, 0.468);
+}

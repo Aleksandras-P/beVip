@@ -1,0 +1,36 @@
+.carTextContent {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 5%;
+    
+    h2, h3, p {
+        color: var(--carTextContent-descriptionsColor);
+    }
+
+    h2, h3 {
+        text-transform: capitalize;
+    }
+
+    &__span{
+        color: var(--carTextContent-spanColor);
+    }
+
+    &--mansory {
+    font-family: "Cormorant Garamond", serif;
+    color: var(--mansory-gold);
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    
+    
+    }
+
+    &--brabus {
+    font-family: "Roboto Slab", serif;
+    color: var(--brabus-red);
+    font-size: 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+    }
+}

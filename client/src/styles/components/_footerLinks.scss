@@ -1,0 +1,22 @@
+
+ .footer-links {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+
+        &__link {
+        border-radius: 50px;
+        font-weight: 400;
+        font-size: 12px;
+        text-transform: uppercase;
+        word-spacing: 5px;
+        letter-spacing: 0%;
+    }
+
+    &__link:hover {
+        color: var(--footer-links-hover);
+        transition: all 0.4S ease;
+
+    }
+    }

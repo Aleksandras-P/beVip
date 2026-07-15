@@ -1,0 +1,58 @@
+@use "../abstracts/mixins";
+
+.navbar-links {
+    display: flex;
+    gap: 30px;
+
+    &__link {
+        padding: 10px 20px;
+        border-radius: 50px;
+        font-weight: 600;
+        text-transform: uppercase;
+        word-spacing: 5px;
+        letter-spacing: 0%;
+    }
+
+    &__link:hover {
+        @include mixins.goldGradient-text;
+        transition: all 0.4s ease;
+    }
+
+    &--desktop {
+        display: flex;
+
+        @include mixins.mobile {
+            display: none;
+        }
+
+        @include mixins.tablet {
+            display: none;
+        }
+    }
+
+    &--mobile {
+        display: none;
+
+        @include mixins.mobile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+
+            .navbar-links__link {
+                font-size: 22px;
+            }
+        }
+
+        @include mixins.tablet {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 24px;
+
+            .navbar-links__link {
+                font-size: 18px;
+            }
+        }
+    }
+}

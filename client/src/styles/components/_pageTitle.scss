@@ -1,0 +1,11 @@
+.pageTitle {
+    text-align: center;
+
+    color: var(--pageTitle-color);
+
+    margin: 5% 0;
+
+    &__span {
+     color: var(--pageTitle-span);
+    }
+}

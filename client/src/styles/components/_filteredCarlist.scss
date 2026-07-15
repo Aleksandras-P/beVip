@@ -1,0 +1,17 @@
+.filteredCarlist {
+    text-align: center;
+
+    &__loadBtn {
+
+        display: inline-block;
+        cursor: pointer;
+        transition: all 0.4s;
+
+        color: var(--loadMoreBtn-color);
+
+    }
+
+    &__loadBtn:hover {
+        color: var(--loadMoreBtn-hover)
+    }
+}

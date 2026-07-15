@@ -1,0 +1,16 @@
+.profileRender {
+display: flex;
+flex-direction: column;
+align-items: center;
+
+&__content {
+    background: var(--profileRender-coontainer-bg);
+    padding: 2% 4%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+}

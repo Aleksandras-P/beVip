@@ -1,0 +1,166 @@
+@use "../abstracts/variables" as vars;
+
+[data-theme="dark"] {
+    
+    // // Main // //
+    --bg-color: #{vars.$darkColor};
+    --text-color: #{vars.$lightColor};
+    --shadow-color: #{rgba(vars.$darkColor,0.7)};
+    --selected-border: #{vars.$primaryColor};
+    --headings-color: #{vars.$secondaryDarkColor};
+    --descriptions-span-text: #{vars.$secondaryColor};
+    --label-text: #{rgba(vars.$secondaryColor, 0.8)};
+    --pageTitle-color: #{rgba(vars.$lightColor, 0.8)};
+    --pageTitle-span: #{rgba(vars.$secondaryColor, 0.8)};
+    --input-bg: #{rgba(vars.$darkColor, 0.5)};
+    --input-border: #{rgba(vars.$primaryColor,0.6)};
+    --userMenu-bg: #{rgba(vars.$primaryDarkColor, 1)} ;
+    --userMenu-border: #{rgba(vars.$primaryColor, 0.8)} ;
+    --userIcon-hover: #{rgba(vars.$secondaryColor, 1)};
+    --selected-bg: #{rgba(vars.$secondaryColor, 1)};
+    --inputArrow-color: #{rgba(vars.$secondaryColor, 0.5)};
+    --priceDisplay-bg: #{rgba(vars.$secondaryDarkColor, 0.1)};
+    --priceDisplay-border: #{rgba(vars.$secondaryDarkColor, 0.5)};
+    --priceDisplay-descriptionColor: #{rgba(vars.$secondaryColor, 0.9)};
+    --discount-redColor: #{rgba(vars.$redColor, 0.7)};
+    --mansory-gold: #F0C040;
+    --brabus-red:#a00000 ;
+
+
+    // Loader
+    --loader-ring-color: #{vars.$secondaryColor};
+    --loader-bg: #{vars.$darkColor};
+
+    // Buttons
+    --primaryBtn-border: #{vars.$primaryColor};
+    --primaryBtn-text: #{vars.$primaryDarkColor};
+
+    --primaryBtn-filled-bg: #{vars.$primaryColor};
+    --primaryBtn-filled-text: #{vars.$darkColor};
+    --primaryBtn-filled-border: #{vars.$primaryColor};
+
+    --secondaryBtn-border: #{vars.$secondaryColor};
+    --secondaryBtn-text: #{vars.$secondaryDarkColor};
+
+    --secondaryBtn-filled-bg: #{vars.$secondaryColor};
+    --secondaryBtn-filled-text: #{vars.$darkColor};
+    --secondaryBtn-filled-border: #{vars.$secondaryColor};
+
+
+    // Nav
+    --navbar-bg: #{rgba(vars.$primaryDarkColor, 0.50)};
+    --navbar-border: #{vars.$primaryColor};
+
+    --logo-first-word: #{rgba(vars.$secondaryColor, 0.8)} ;
+
+    --text-color-hover: #{vars.$goldGradient};
+    --hover-background: #{vars.$secondaryColor};
+    --hover-border: #{vars.$primaryColor};
+
+    --theme-toggle-bg:#{vars.$primaryDarkColor};
+    --theme-toggle-border: #{vars.$primaryColor};
+    --theme-toggle-thumb-bg: #{vars.$darkColor};
+    --theme-toggle-thub-icon: #{vars.$secondaryColor};
+    
+    --language-toggle-border: #{vars.$primaryColor};
+
+    // Footer
+
+    --footer-bg: #{
+        linear-gradient(180deg,rgba(vars.$darkColor, 1) 10%, rgba(vars.$darkColor, 0) 85%, rgba(vars.$darkColor, 1) 100%),
+        radial-gradient(circle,rgba(vars.$primaryDarkColor, 0) 0%, rgba(vars.$primaryDarkColor, 1) 100%)
+    };
+    --footer-links-hover: #{vars.$secondaryDarkColor};
+    --footer-card-bg: #{rgba(vars.$primaryDarkColor, 0.2)};
+    --footer-card-border: #{rgba(vars.$primaryDarkColor, 0.5)};
+    --footer-copyright-border: #{rgba(vars.$primaryDarkColor, 0.5)};
+    --footer-copyright-text: #{vars.$greyColor};
+    --footer-contacts-information-text: #{vars.$secondaryColor};
+    --footer-contacts-information-hover: #{#{vars.$primaryColor}};
+
+    // Car Card
+    --modal-bg: #{vars.$darkColor};
+    --modal-border: #{rgba(vars.$primaryColor, 0.5)};
+    --imgCard-border: #{vars.$primaryDarkColor};
+    --carCard-border: #{rgba(vars.$secondaryColor, 0.3)};
+    --carTextContent-descriptionsColor: #{rgba(vars.$secondaryDarkColor, 0.7)};
+    --carTextContent-spanColor: #{rgba(vars.$lightColor, 0.7)};
+    --carCard-link-bg: #{rgba(vars.$secondaryDarkColor, 0.2)};
+    --carCard-link-border: #{rgba(vars.$secondaryDarkColor, 0.3)};
+    --carCard-link-hover: #{rgba(vars.$secondaryDarkColor, 0.7)};
+    --bookingIcon-color: #{rgba(vars.$primaryColor, 1)};
+
+    // //  Home // //
+
+    --carOffers-underText-color: #{vars.$greyColor};
+
+    // Header
+    
+    --header-bg: #{
+        linear-gradient(180deg,rgba(vars.$darkColor, 1) 0%, rgba(vars.$darkColor, 0) 41%, rgba(vars.$darkColor, 1) 100%),
+        linear-gradient(165deg,rgba(vars.$darkColor, 1) 0%, rgba(vars.$primaryDarkColor, 1) 60%, rgba(vars.$primaryColor, 1) 100%)
+    };
+    
+    --discountCardBg-border: #{rgba(vars.$secondaryDarkColor, 0.5)};
+
+    --adsContainer-hover-bg: #{rgba(vars.$darkColor, 0.8)};
+    --adsContainer-border: #{rgba(vars.$secondaryColor, 0.3)};
+    --adsContainer-text: #{linear-gradient(90deg, rgba(191, 149, 63,1) 0%, rgba(252, 246, 186,1) 50%, rgba(179, 135, 40,1) 100%)};
+
+    // // Cars // //
+
+    //  Search Filters 
+    --searchFiltersBtn-color: #{rgba(vars.$secondaryDarkColor, 0.5)};
+    --searchFiltersBtn-hover: #{rgba(vars.$secondaryColor, 0.8)};
+    --searchFiltersContainer-bg: #{rgba(vars.$primaryDarkColor, 0.4)};
+    --searchFiltersContainer-border: #{rgba(vars.$primaryColor, 0.4)};
+    --searchLabel-text: #{rgba(vars.$lightColor, 0.5)};
+
+    // Car List
+
+    --carList-bg: #{
+        linear-gradient(180deg,rgba(vars.$darkColor, 1) 0%, rgba(vars.$darkColor, 0) 50%, rgba(vars.$darkColor, 1) 100%),
+        radial-gradient(circle, rgba(vars.$primaryDarkColor, 0) 30%, rgba(vars.$primaryDarkColor, 1) 100%)};
+
+    --loadMoreBtn-color: #{rgba(vars.$secondaryDarkColor, 0.7)};
+    --loadMoreBtn-hover: #{rgba(vars.$secondaryColor, 0.8)};
+    // Booking
+
+     --bookingPage-bg: #{
+        linear-gradient(180deg,rgba(vars.$darkColor, 1) 0%, rgba(vars.$darkColor, 0) 50%, rgba(vars.$darkColor, 1) 100%),
+        radial-gradient(circle, rgba(vars.$primaryDarkColor, 0) 10%, rgba(vars.$primaryDarkColor, 1) 100%)};
+    
+        --bookingCard-bg: #{rgba(vars.$primaryDarkColor, 0.5)};
+    --bookingCard-border: #{rgba(vars.$primaryColor, 0.4)};
+    --answer-bg: #{vars.$darkColor};
+
+    // // About Us // //
+
+    --aboutUsContainer-bg: #{rgba(vars.$primaryDarkColor, 0.4)};
+    --aboutUsContainer-border: #{rgba(vars.$primaryColor, 0.5)};
+    --aboutUsText-border: #{rgba(vars.$primaryColor, 0.8)};
+    --aboutUsText-bg: #{rgba(vars.$darkColor, 0.8)};
+    --aboutUsPage-bg: #{
+        linear-gradient(180deg,rgba(vars.$darkColor, 1) 0%, rgba(vars.$darkColor, 0) 50%, rgba(vars.$darkColor, 1) 100%),
+        radial-gradient(circle, rgba(vars.$primaryDarkColor, 0) 10%, rgba(vars.$primaryDarkColor, 1) 100%)};
+    
+    // // Profile Page // //
+
+
+    --profilePage-bg: #{
+        linear-gradient(180deg,rgba(vars.$darkColor, 1) 0%, rgba(vars.$darkColor, 0) 80%, rgba(vars.$darkColor, 1) 100%),
+        radial-gradient(circle, rgba(vars.$primaryDarkColor, 0) 10%, rgba(vars.$primaryDarkColor, 1) 100%)};
+
+    --profilePageControler-bg: #{rgba(vars.$darkColor, 0.6)};
+    --profilePageControler-border: #{rgba(vars.$primaryColor, 0.5)};
+    --profilePageControler-option-text: #{rgba(vars.$secondaryDarkColor, 0.5)};
+    --profilePageControler-option-hover: #{rgba(vars.$secondaryDarkColor, 0.8)};
+    --profilePageControler-secondaryBorder: #{rgba(vars.$secondaryColor, 0.3)};
+    --profileRender-coontainer-bg: #{rgba(vars.$primaryColor, 0.3)};
+    --orderCard-border: #{rgba(vars.$primaryColor, 0.5)};
+    --profileLinks-hover: #{rgba(vars.$secondaryDarkColor, 0.8)};
+    --profileLinks-color: #{rgba(vars.$secondaryColor, 1)};
+
+
+
+}

@@ -1,0 +1,177 @@
+@use "../abstracts/mixins";
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1% 3%;
+    gap: 5%;
+
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    background: transparent;
+    transition: all 0.3s ease;
+
+    @include mixins.mobile {
+        position: relative;
+    }
+
+    &__selectors {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 30px;
+        width: 15%;
+
+        @include mixins.mobile {
+            display: none;
+        }
+
+        @include mixins.tablet {
+            display: none;
+        }
+    }
+
+    &__burger {
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 28px;
+        height: 20px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        z-index: 1100;
+
+        position: fixed;
+        top: 5%;
+        right: 5%;
+
+        span {
+            display: block;
+            height: 3px;
+            width: 100%;
+            background-color: #D4AF37;
+            border-radius: 2px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        &--open {
+            span:nth-child(1) {
+                transform: translateY(9px) rotate(45deg);
+            }
+            span:nth-child(2) {
+                opacity: 0;
+            }
+            span:nth-child(3) {
+                transform: translateY(-9px) rotate(-45deg);
+            }
+        }
+
+        @include mixins.mobile {
+            display: flex;
+        }
+
+        @include mixins.tablet {
+            display: flex;
+        }
+    }
+
+    &__overlay {
+        display: none;
+
+        @include mixins.mobile {
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 900;
+        }
+
+        @include mixins.tablet {
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 900;
+        }
+    }
+
+    &__mobileMenu {
+        display: none;
+
+        @include mixins.mobile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: var(--navbar-bg, #0d1b3d);
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+            z-index: 1000;
+
+            &--open {
+                transform: translateX(0);
+            }
+        }
+
+        @include mixins.tablet {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 32px;
+            padding: 0 32px;
+
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 300px;
+            height: 100vh;
+            background: var(--navbar-bg, #0d1b3d);
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+            z-index: 1000;
+
+            &--open {
+                transform: translateX(0);
+            }
+        }
+    }
+
+    &__mobileSelectors {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+.navbar-scrolled {
+    background: var(--navbar-bg);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+
+    @include mixins.mobile {
+        background: transparent;
+        backdrop-filter: none;
+        box-shadow: none;
+    }
+}
+

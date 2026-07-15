@@ -1,0 +1,72 @@
+@use "../abstracts/mixins";
+
+.priceDisplay {
+    position: relative;
+    text-align: center;
+    background: var(--priceDisplay-bg);
+    padding: 5px 10px;
+    width: 60%;
+    border-radius: 10px;
+    margin: 10px auto 0 auto;
+    text-transform: capitalize;
+    border: 1px solid var(--priceDisplay-border);
+
+    &__title {
+        font-size: 16px;
+    }
+
+    &__pricelist {
+        display: flex;
+        justify-content: space-around;
+        
+    }
+
+    &__description {
+        border-bottom: 1px solid var(--priceDisplay-border);
+        margin-bottom: 5%;
+        padding: 5% 0;
+        color: var(--priceDisplay-descriptionColor);
+    }
+
+    &__discountContainer {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    &__discountContainer h1 {
+        color: var(--discount-redColor);
+        font-size: 28px;
+    }
+
+    &__priceBox {
+        position: relative;
+    }
+
+    &__price {
+        font-size: 16px;
+    }
+
+    &__discountPrice {
+        font-size: 20px;
+        @include mixins.goldGradient-text
+    }
+
+    &__priceBefore {
+        position: absolute;
+        font-size: 12px;
+        right: -30%;
+        top: 0;
+    }
+
+     &__priceBefore::after {
+        content: "";
+        display: block;
+        width: 80%;
+        height: 2px;
+        background: var(--discount-redColor);
+        transform: rotate(170deg);
+        position: absolute;
+        top: 40%;
+     }
+}
